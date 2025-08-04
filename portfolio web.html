@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ijaj's Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.light-mode {
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(166, 37, 225);
+      height: 90px;
+      padding: 0 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: black;
+    }
+
+    .left {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.7rem;
+      font-style: italic;
+      background: linear-gradient(45deg, #f89af6, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.3s;
+    }
+
+    .left:hover {
+      transform: scale(1.05);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #6a11cb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #f89af6;
+      color: black;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+
+    footer {
+      background-color: #7627e0;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      margin-top: 50px;
+    }
+
+    section {
+      padding: 60px 40px;
+      min-height: 100vh;
+      border-bottom: 1px solid white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <h1>Loading...</h1>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="left">Ijaj's Portfolio</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-adjust"></i>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+  <div style="text-align: center;">
+    <img src="profile.jpeg" alt="Profile Picture" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/9414/9414296.png" alt="Web Dev Illustration" style="max-width: 300px;">
+  </div>
+  <div style="max-width: 800px; margin: 40px auto; text-align: center;">
+    <h2 style="font-size: 2.5rem;">Hi! My name is <span style="color: #f89af6;">Ijaj</span></h2>
+    <p style="font-size: 1.3rem; line-height: 1.8;">I'm <strong style="color: #f89af6;">Ijajuddin Ahmed</strong>, a passionate web development learner and civil engineering student at <strong style="color: #f89af6;">NIT Silchar</strong>. This is where I showcase my journey, projects, and the skills I'm building with <strong style="color: #f89af6;">HTML</strong>, <strong style="color: #f89af6;">CSS</strong>, and <strong style="color: #f89af6;">JavaScript</strong>. I enjoy crafting clean, responsive websites — and when I'm not coding, you’ll find me gaming or watching anime!</p>
+    <div style="margin-top: 20px;">
+      <a href="Resume.1.pdf" style="background-color: rgb(74, 25, 158); color: white; border: 2px solid white; border-radius: 5px; padding: 10px 20px; font-size: 1.1rem; margin-right: 10px; text-decoration: none;">Download Resume</a>
+      <a href="https://github.com/1jaj-3x3" target="_blank" style="background-color: rgb(74, 25, 158); color: white; border: 2px solid white; border-radius: 5px; padding: 10px 20px; font-size: 1.1rem; text-decoration: none;">Visit GitHub</a>
+    </div>
+  </div>
+</section>
+  <section id="about">
+  <div style="max-width: 900px; margin: auto; background-color: #7627e0; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    <h1 style="text-align: center; font-size: 3rem; color: #f89af6; margin-bottom: 30px;">About Me</h1>
+    <p style="font-size: 1.2rem; line-height: 1.8;">Hello! My name is <span style="color: #f89af6; font-weight: bold;">Ijajuddin Ahmed</span>. I'm from <span style="color: #f89af6; font-weight: bold;">Guwahati, Assam</span>, and I completed my schooling at <span style="color: #f89af6; font-weight: bold;">SBGJ Guwahati</span>.</p>
+    <p style="font-size: 1.2rem; line-height: 1.8;">I'm currently pursuing a degree in <span style="color: #f89af6; font-weight: bold;">Civil Engineering</span> at <span style="color: #f89af6; font-weight: bold;">NIT Silchar</span>. Alongside my academic journey, I’ve developed a strong interest in <span style="color: #f89af6; font-weight: bold;">web development</span>. I'm actively learning and building projects using <span style="color: #f89af6; font-weight: bold;">HTML</span>, <span style="color: #f89af6; font-weight: bold;">CSS</span>, and <span style="color: #f89af6; font-weight: bold;">JavaScript</span> to strengthen my front-end development skills.</p>
+    <p style="font-size: 1.2rem; line-height: 1.8;">Beyond academics and coding, I enjoy <span style="color: #f89af6; font-weight: bold;">gaming</span>, exploring new tech, and <span style="color: #f89af6; font-weight: bold;">watching anime</span>. These hobbies not only help me relax but also fuel my creativity and curiosity. I’m passionate about continuous learning and excited to grow further in the world of web development.</p>
+  </div>
+</section>
+  <section id="projects">
+  <div style="max-width: 900px; margin: auto;">
+    <h1 style="text-align: center; font-size: 3rem; margin-bottom: 40px; color: #f89af6;">My Projects</h1>
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <div style="background-color: #9b4fe0; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+        <h2>Portfolio Website</h2>
+        <p>A personal portfolio built using HTML, CSS, and JavaScript. It showcases my introduction, skills, and links to my projects.</p>
+        <a href="https://github.com/1jaj-3x3/Portfolio-web" target="_blank" style="color: #f89af6; text-decoration: none; font-weight: bold;">View on GitHub</a>
+      </div>
+      <div style="background-color: #9b4fe0; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+        <h2>To-Do List App</h2>
+        <p>A simple and interactive To-Do List application that lets users add, complete, and delete tasks — all built with vanilla HTML, CSS, and JS.</p>
+        <a href="https://github.com/1jaj-3x3/ToDo-list" target="_blank" style="color: #f89af6; text-decoration: none; font-weight: bold;">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="contact" style="text-align: center;">
+  <h1 style="color: #f89af6; font-size: 3rem; margin-bottom: 30px;">Contact Me</h1>
+  <p style="font-size: 1.5rem;"><strong>Phone:</strong> 8638664954</p>
+  <p style="font-size: 1.5rem;"><strong>Email:</strong> <a href="mailto:ijaj00042@gmail.com" style="color: white; text-decoration: none;">ijaj00042@gmail.com</a></p>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/ijaj._" target="_blank" style="color: white; text-decoration: none; font-size: 1.2rem; margin: 10px; border: 2px solid white; padding: 10px 20px; border-radius: 8px;"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.linkedin.com/in/Ijajuddin Ahmed" target="_blank" style="color: white; text-decoration: none; font-size: 1.2rem; margin: 10px; border: 2px solid white; padding: 10px 20px; border-radius: 8px;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ijajuddin Ahmed. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      document.getElementById('loader').classList.add('hidden');
+    });
+
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Theme toggle
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
